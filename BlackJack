@@ -1,0 +1,36 @@
+public class BlackJack {
+
+    public static void main(String[] args) {
+              System.out.println(returnClosest(21, 26));
+    }
+
+    static int returnClosest(int x, int y){
+
+        int a = 21 - x;             /*a is the value of the player's card - 21, thus stating how far away a player is 
+                                      from 21*/  
+        int b = 21 - y;
+        
+   
+        
+        if ((a==0)||(b==0)){            //So if both player's remainders are 0 the system will return 21 
+            return 21;
+        }
+         else if (a > b && a > 0 ){    //if player a's remainder is greater than player b's and is also greater than 0 
+                                        //then it will return player a's remainder value'.
+            return x;
+        }
+         else if (a < b && b > 0) {     //same situation for player b
+
+             return y;
+        }
+          else if (a == b && a > 0){    //draw circumstance
+
+             return y;
+        }
+         else if (a < 0 && b < 0){  //if both players go over
+
+             return 0;}
+
+        return 0;
+    }
+}

@@ -1,0 +1,13 @@
+public class Return {
+
+
+
+    public static void main(String[] args) {
+
+        System.out.println(ReturnMessage());
+    }
+
+    private static String ReturnMessage(){
+        return "Hello World!";
+    }
+}

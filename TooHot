@@ -1,0 +1,40 @@
+public class TooHot {
+
+private static boolean temperatureTest (int temp, boolean isSummer){
+
+    if (isSummer) {                               //if isSummer is true and the temperature 
+                                                  //falls within these ranges in the following if statement, then the system will return 
+                                                  //true, if not then will return false
+        if ((temp > 60) && (temp < 100)) {
+            return true;
+        } else {
+            return false;
+
+        }
+    }
+
+    if (!isSummer){                               //if isSummer is false and the temperatures falls within the ranges of seasons that aren't
+                                                  //summer then system will return true, if not then false
+
+        if ((temp > 60) && (temp < 90)){
+                return true;
+            }
+        else {
+            return false;
+        }
+
+            }
+
+
+
+    return isSummer;
+}
+
+
+    public static void main(String[] args) {
+
+
+    System.out.println(temperatureTest(90 , true)); //calls the temperatureTest method and programmer assigns values for conditionals
+    }                                               //In this circumstance, system will return true
+
+}

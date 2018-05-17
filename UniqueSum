@@ -1,0 +1,32 @@
+public class UniqueSum {
+    public static void main(String[] args) {
+
+        System.out.println(uniqueSum( 3, 2, 2));
+    }
+    public static int uniqueSum (int x, int y , int z){ //sets conditionals for uniqueSum Method
+
+        int i;                      //creates an int of 0 so if the if fails all parameters returns nothing 
+
+        if ( x == y && x == z) {        //if all numbers  are equal to one another then system returns value 0
+            x = 0;
+            y = 0;
+            z = 0;}
+
+        else if (x==z){                 //if x is the same as z the system will know those values are equal to 0
+            x = 0;
+            z = 0;}
+
+        else if (x==y){                 // the same for x and y 
+            x = 0;
+            y = 0; }
+
+        else if (y==z){                 // the same for y and z so all circumstances work
+            y = 0;
+            z = 0;}
+
+        i = x + y + z;                  // the system will return I attempting to add all numbers
+                                        // regardless of validation check, but with it, programme is correct 
+        return i;
+    }
+
+}

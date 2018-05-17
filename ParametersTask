@@ -1,0 +1,23 @@
+public class Parameters {
+
+
+    public static void main(String[] args) {
+
+        System.out.println(calc(5, 0, false));
+    }
+
+
+    public static int calc(int x, int y, boolean add) {
+
+        if (add) {
+            return x + y;
+        } else if (!add){
+            return x * y;
+        }
+            else if (x==0){
+            return y;
+        }
+
+        return x;
+    }
+}

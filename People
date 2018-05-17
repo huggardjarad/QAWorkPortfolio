@@ -1,0 +1,54 @@
+
+
+import java.util.ArrayList;
+import java.util.Objects;
+
+public class People {
+                                                                //Stated Required variables
+    private int age;
+    private String name;
+    private String jobTitle;
+
+
+
+
+    public People(int age, String name, String jobTitle){
+
+        this.age = age;                         //because People method is overshadowed by variables stated in
+                                                //People class, this. methods have been used to retain variable name
+        this.name = name;
+        this.jobTitle = jobTitle;
+    }
+        public String toString(int age, String name, String jobTitle){  //applying a toString method to add these 
+                                                                        //variables to a string     
+
+        return " Age: " + age + " Name: " + name + " Occupation: " + jobTitle;       //Setting the format for how data
+                                                                                    // should be presented via String
+        }
+
+
+        public static void main(String[] args) {
+
+
+            ArrayList<People> objects = new ArrayList<People>();              //Assigning People to a List via array of
+                                                                              //People Object variables
+
+            objects.add(new People(32, "Terry","Custodian"));   //objects array is now having people
+                                                                                //added with their conditionals stated
+                                                                                    //within the toString method.
+            objects.add(new People(29, "Frank", "Retail Manager"));
+            objects.add(new People(49, "Rita", "Waitress"));
+
+            for (int i = 0; i <objects.size(); i++){                        //for loop used to call each index of the 
+                                                                // array so that each person's details are displayed 
+
+                System.out.println(objects.get(i).toString(objects.get(i).age, (objects.get(i).name),
+                        (objects.get(i).jobTitle)));      
+                                                                //The system will state which object/person
+                                                            // to output at index 0, it then gets the variables stated 
+                                                            //within the toString, so each age, name and jobTitle for 
+                                                            //same index and the loop will cojntinue until there are
+                                                            // no indices left to call from the array    
+            }
+    }
+}

@@ -1,0 +1,21 @@
+public class Arrays {
+
+
+    public static void main(String[] args) {
+
+        int[] arrayofInts = new int[10];
+
+        for (int i = 0; i<arrayofInts.length; i++){
+            arrayofInts[i] = i;
+
+            System.out.println(arrayofInts[i] + ", ");
+        }
+
+        for (int v = 0; v<arrayofInts.length;v++){
+
+            arrayofInts[v] *= 10;
+            System.out.println(arrayofInts[v] + ", ");
+        }
+    }
+}
+
